@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/codigo/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+        <main>
+            <div class="all">
+                <div class="TopRow">
+                    <div class="Vendedores">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="Meta">
+
+                        <div class="Titulo">
+                            <h1>Meta vs Receita</h1>
+                            <div class="Alinhar">
+                                <button class="Btn-Meta">Meta</button>
+                                <div class="Botoes">
+                                    <h3>2019</h3>
+                                    <h3>2020</h3>
+                                    <h3>2021</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g0">
+                           <canvas  id="Meta-graphic">
+
+                           </canvas> 
+                        </div>
+                        <div class="Modifica">
+                            <button class="Modificadores" id="Btn-remove0" style="color: red; background-color: rgb(255, 159, 159);"><i class="fa-solid fa-minus"></i> Remover</button>
+                            <button class="Modificadores" id="Btn-edita0" style="color: lightyellow; background-color: rgb(204, 204, 138);"><i class="fa-solid fa-pen-fancy"></i> Editar</button>
+                            <button class="Modificadores" id="Btn-add0" style="color: green; background-color: rgb(159, 228, 159);"><i class="fa-solid fa-plus"></i> Adicionar</button>
+                        </div>
+
+                    </div>
+                    <div class="Produto">
+
+                        <div class="Titulo">
+                            <h1>Receita por Produto</h1>
+                            <div class="Alinhar">
+                                <div class="Botoes">
+                                    <h3>Exel</h3>
+                                    <h3>Power BI</h3>
+                                    <h3>Power Point</h3>
+                                    <h3>Python</h3>
+                                    <h3>Word</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g1">
+                            <canvas id="Produto-graphic">
+
+                            </canvas>
+                        </div>
+                        <div class="Modifica">
+                            <button class="Modificadores" id="Btn-remove1" style="color: red; background-color: rgb(255, 159, 159);"><i class="fa-solid fa-minus"></i> Remover</button>
+                            <button class="Modificadores" id="Btn-edita1" style="color: lightyellow; background-color: rgb(204, 204, 138);"><i class="fa-solid fa-pen-fancy"></i> Editar</button>
+                            <button class="Modificadores" id="Btn-add1" style="color: green; background-color: rgb(159, 228, 159);"><i class="fa-solid fa-plus"></i> Adicionar</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="BottomRow">
+                    <div class="Vendedor">
+
+                        <div class="Titulo">
+                            <h1>Análise Vendedor</h1>
+                            <div class="Alinhar">
+                                <div class="Botoes">
+                                    <h3>2019</h3>
+                                    <h3>2020</h3>
+                                    <h3>2021</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g2">
+                            <canvas id="Vendedor-graphic">
+
+                            </canvas>
+                        </div>
+                        <div class="Modifica">
+                            <button class="Modificadores" id="Btn-remove2" style="color: red; background-color: rgb(255, 159, 159);"><i class="fa-solid fa-minus"></i> Remover</button>
+                            <button class="Modificadores" id="Btn-edita2" style="color: lightyellow; background-color: rgb(204, 204, 138);"><i class="fa-solid fa-pen-fancy"></i> Editar</button>
+                            <button class="Modificadores" id="Btn-add2" style="color: green; background-color: rgb(159, 228, 159);"><i class="fa-solid fa-plus"></i> Adicionar</button>
+                        </div>
+
+                    </div>
+                    <div class="Analise">
+
+                        <div class="Titulo">
+                            <h1>Análise Vendedor vs Produto</h1>
+                            <div class="Alinhar">
+                                <div class="BotoesU">
+                                    <h3>2019</h3>
+                                    <h3>2020</h3>
+                                    <h3>2021</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <canvas id="Analise-graphic">
+
+                        </canvas>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- modais -->
+
+            <div class="ModalAdicionar" id="ModalAdicionar">
+                <div class="ModalCenter">
+                    <h2>Adicionar Informações</h2>
+                    <i class="fa-regular fa-circle-xmark" id="close"></i>
+                    <label for="numFields">Número de Campos:</label>
+                    <input type="number" id="numFields" min="1" max="10" value="1"/>
+                    <button id="generateFields">Gerar Campos</button>
+                    <div id="dynamicFieldsContainer"></div>
+                    
+                    <button id="submitData">Enviar Dados</button>
+                    
+                </div>
+            </div>
+
+        </main>
+</body>
+
+    <script defer src="/codigo/js/index.js"></script>
+    <script type="module" src="/codigo/Services/FireBaseDATA.js"></script>
+</html>
