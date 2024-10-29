@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background: linear-gradient(to bottom, #000000, #000000, #00060a, #00182e);
+    background-repeat: no-repeat;
+    height: 98.4vh;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, a, button {
+    font-family: "Roboto", serif;
+}
+
+.row, .BottomRow, .TopRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.Meta, .Produto {
+    display: block;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    border: 2px solid rgba(255, 255, 255, 0.308);
+    border-radius: 15px;
+    width: 900px;
+    height: 400px;
+}
+
+.Vendedor {
+    display: block;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    border: 2px solid rgba(255, 255, 255, 0.308);
+    border-radius: 15px;
+    width: 500px;
+    height: 350px;
+}
+
+.Analise {
+    display: block;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    border: 2px solid rgba(255, 255, 255, 0.308);
+    border-radius: 15px;
+    width: 1300px;
+    height: 350px;
+}
+
+.Vendedores {
+    display: block;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    border: 2px solid rgba(255, 255, 255, 0.308);
+    border-radius: 15px;
+    width: 1820px;
+    height: 150px;
+}
+
+.Titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.Titulo h1{
+    font-size: 30px;
+}
+
+.Botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007bee98;
+    height: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 25px;
+    gap: 20px;
+}
+
+.Botoes:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #02ff0f88;
+    height: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 25px;
+    gap: 20px;
+}
+
+.BottomRow .Botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007bee98;
+    height: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 25px;
+    gap: 20px;
+}
+
+.BottomRow .BotoesU {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #02ff0f88;
+    height: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 25px;
+    gap: 20px;
+}
+
+.Alinhar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+.Alinhar h3 {
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.Btn-Meta {
+    background-color: white;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    height: 45px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Btn-Meta:hover {
+    transform: translateY(-8px);
+}
+
+/* Botoes Modificadore */
+
+.Modifica {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    margin-right: 40px;
+    position: relative;
+    top: 23px;
+}
+
+.Modificadores {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.Modificadores:hover {
+    transform: translateY(-8px);
+}
+
+/* Gráficos */
+
+.g0, .g1 {
+    margin: 0 auto;
+    width: 800px;
+    height: 270px;
+    padding-top: 10px;
+}
+
+.g2 {
+    margin: 0 auto;
+    width: 450px;
+    height: 200px;
+}
+
+/* Modal */
+
+.ModalAdicionar {
+    background-color: rgba(214, 214, 214, 0.911);
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    border-radius: 25px;
+    max-width: 60%;
+    transition: all 0.3s ease;
+}
+
+.ModalCenter {
+    margin: auto 20px;
+}
+
+.ModalCenter h2 {
+    font-size: 30px;
+}
+
+.ModalCenter label{
+    margin-left: 220px;
+    font-size: 20px;
+}
+
+.ModalCenter input:nth-child(1) {
+    margin-left: 250px;
+}
+
+.ModalCenter input:nth-child(1), input:nth-child(2), input:nth-child(3) {
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.ModalCenter button {
+    background-color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ModalCenter button:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+#submitData {
+    margin-left: 250px;
+    margin-top: 10px;
+}
+
+.ModalCenter i {
+    position: relative;
+    top: -55px;
+    left: 1070px;
+    color: red;
+    cursor: pointer;
+    font-size: 30px;
+}
